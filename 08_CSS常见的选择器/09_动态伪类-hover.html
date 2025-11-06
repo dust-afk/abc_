@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    /* a元素的链接从来没有被访问过 */
+    a:link{
+
+      color: red;
+    }
+    /* a元素被访问过 */
+    a:visited{
+
+      color: green;
+    }
+    /* a/input元素聚焦 */
+    a:foucus{
+      color:yellow;
+    }
+    /* a元素鼠标放到上面 */
+    a:hover{
+
+      color: blue;
+    }
+    /* 点下去了,还未松手 */
+    a:active{
+
+      color:blueviolet
+    }
+
+  </style>
+</head>
+<body>
+  <a href="http://www.stackoverflow.com">stackoverflow</a>
+  <a href="http://www.baidu.com">百度一下</a>
+  <input type="text">
+</body>
+</html>
