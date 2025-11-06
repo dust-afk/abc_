@@ -1,0 +1,39 @@
+  .item{
+    display: inline-block;
+    width: 234px;
+    height: 300px;
+    padding: 25px 10px;
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box;
+  
+  }
+  .item:hover{
+    box-shadow: 0 5px 10px 5px rgba(0,0,0,.2);
+  }
+  .item img{
+    width: 160px;
+    height: 160px;
+  }
+  .item .title{
+    margin-top: 15px;
+  }
+  .item .desc{
+    color: #999;
+    margin-top: 8px;
+    /* 单行显示省略号 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }    
+  .item .price{
+      margin-top: 14px;
+      font-size: 14px;
+    }
+    .item .price .new-price{
+      color:#ff6700;
+    }
+    .item .price .old-price{
+      color:#b0b0b0;
+      text-decoration: line-through;
+    }

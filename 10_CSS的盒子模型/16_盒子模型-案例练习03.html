@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    .item{
+      width: 240px;
+      margin: 0 auto;
+    }
+    .item .album img{
+      width: 100%;
+      border-radius: 6px;
+    }
+    .item .info p {
+      font-size: 15px;
+      margin-top: 10px;
+      /* /* 显示a一行 */
+      white-space: nowrap; 
+        overflow : hidden;
+      text-overflow: ellipsis;
+      /* display: -webkit-box;
+      -webkit-line-clamp:2;
+    -webkit-box-orient: vertical; */
+    }
+    .item .info .anchor{
+      color:#9499a0;
+    }
+    .item .info .anchor::before{
+      content: url();
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="item">
+    <div class="album">
+    <a href="https://www.bilibili.com/video/BV18V44zkEnT/?t=16&spm_id_from=333.1007.tianma.12-3-37.click">
+      <img src="../images/bilibili.webp" referrerpolicy="no-referrer" alt="">
+  </a>
+       
+    </div>
+    <div class="info">
+      <p>那些年买过的宿舍小零食！那些年买过的宿舍小零食！那些年买过的宿舍小零食！那些年买过的宿舍小零食！</p>
+      <div class="anchor">
+       <a herf="#">
+         <span class="nickname">谭井同学</span>
+       </a>
+        <span class="time">10-11</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
