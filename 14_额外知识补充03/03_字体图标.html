@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: "iconfont";
+      src: url(./fonts01/iconfont.ttf);
+    }
+    .iconfont{
+      font-family: "iconfont";
+      font-style: normal;
+  
+    }
+    .music::before{
+      content: "\e680";
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 直接通过字符实体的方式显示出来 -->
+  <i class="iconfont">&#xe680;</i>
+  <i class="iconfont">&#xe7c8;</i>
+  <!-- 不使用字符实体的方式展示出来(伪元素) -->
+   <i class="iconfont music"></i>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      color: #f00 !important;
+    }
+    /* 如果自己设置属性,无论继承的优先级多高都以自己的属性为主 */
+    .container{
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    aaa
+    <div class="container">我是container的内容</div>
+  </div>
+</body>
+</html>

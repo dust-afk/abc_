@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 500px;
+      height: 500px;
+      background-color: orange;
+      display: flex;
+      /* 切换justify-content */
+      /* flex-end:让元素与main end对齐 */
+      /* center:居中对齐 */
+      /* space-between: 两端各放一个元素,其他多余元素一定要空间等分*/
+      /* space-evenly:两端也有间隙,并且所有空间等分 */
+      /* space-around:两端也有间距,两端间距是items间距的一半 */
+      justify-content:space-between;
+     
+    }
+    .item{
+      width: 120px;
+      height: 120px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+</html>

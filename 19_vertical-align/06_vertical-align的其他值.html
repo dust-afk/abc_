@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* vertival-align不是给box设置,而是给行内级元素设置的 */
+    .box{
+      background-color: orange;
+    }
+    .box img{
+      width: 200px;
+      vertical-align: top;
+    }
+    .box .small {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color:blue;
+      margin-bottom: 20px;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    普通的文本xxx
+    <img src="../images/bizi.jpg" alt="">
+    <span class="small">xxx</span>
+    xxxx
+  </div>
+</body>
+</html>

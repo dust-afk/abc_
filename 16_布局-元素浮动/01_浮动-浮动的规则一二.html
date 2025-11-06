@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+    }
+    .item1,.item2{
+      background-color: #f00;
+      padding: 10px;
+    }
+    .item1{
+      /* 定位脱离标准流 */
+      /* position:fixed;
+      left:0;
+      top:0;
+      backgroung-color:0; */
+      /* 脱离标准流 */
+      float: left;
+      background-color: #0f0;
+
+    }
+    .item2{
+      float: right;
+    }
+    
+  </style>
+
+</head>
+<body>
+<div class="box">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+</div>
+</body>
+</html>
