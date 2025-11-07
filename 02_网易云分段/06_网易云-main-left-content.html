@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网易云的主要区域</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/main-area-right.css">
+  <style>
+    .main .area{
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #d3d3d3;
+      border-width: 0 1px;
+      background-color:purple;
+      background-image: url(./images/main_bg.png);
+    }
+    /* 左侧区域 */
+    .main .area-left{
+      width: 729px;
+      padding: 20px 20px 40px;
+     
+    }
+    .recommend .list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px 2px;
+
+    }
+    .recommend .list .item{
+      width: 140px;
+      margin-bottom:30px;
+    }
+     .recommend .list .item .top{
+      /* background-color: #f00; */
+      position:relative;
+
+    }
+     .recommend .list .item .top .cover{
+      /* width: 140px;
+      height: 140px; */
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-image: url(./images/cover-sprite.png);
+      background-position: 0 0;
+
+    }
+     .recommend .list .item .top .info{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 27px;
+      padding-left: 10px;
+      line-height: 27px;
+      
+      font-size: 12px;
+      color: #ccc;
+          /* background-color:rgba(0,0,0,.5); */
+      background-image: url(./images/cover-sprite.png);
+      background-position: 0 -537px;
+    }
+    .recommend .list .item .top .info .icon-music{
+      position: relative;
+      top: 2px;
+      /* display: inline-block; */
+      /* width: 14px;
+      height: 11px; */
+      /* background-image: url(../images/music_sprite_02.png); */
+      /* background-position: 0 -24px; */
+    }
+     .recommend .list .item .top .info .count{
+      margin-left: 4px;
+    }
+    .recommend .list .item .top .info .icon-play{
+      /* position: relative;
+      top: 5px; */
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 2px;
+      margin: auto 0;
+      /* display: inline-block; */
+      /* width: 16px;
+      height: 17px; */
+      /* background-image: url(../images/music_sprite_02.png); */
+      /* background-position: 0 0; */
+
+    }
+    /* 底部样式 */
+    .recommend .list .item .bottom{
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+
+    }
+    .recommend .list .item .bottom:hover{
+      text-decoration: underline;
+    }
+    .recommend .list .item .bottom .icon-radio{
+      position: relative;
+      top: 2px;
+    }
+
+    /*新碟上架 */
+    .disc .content{
+      height: 186px;
+      margin:20px 0;
+      box-sizing: border-box;
+      border:1px solid #d3d3d3;
+    }
+    .disc .content .inner{
+      position:relative;
+      height: 100%;
+      box-sizing: border-box;
+      padding:0 25px;
+      border: 1px solid #fff;
+      background-color: #f5f5f5;
+    }
+    .disc .inner .roller{
+      display: flex;
+      height: 100%;
+      overflow: hidden;
+
+    }
+    .disc .inner .roller .list{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-top: 10px;
+      flex-shrink: 0;
+
+    }
+    .disc .inner .roller .list .item{
+      width: 118px;
+      height: 150px;
+      background:url(./images/main_sprite.png) no-repeat -260px 100px;
+    }
+    .disc .inner .roller .list .item .album{
+      position: relative;
+    }
+    .disc .inner .roller .list .item .cover{
+      position:absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background:url(./images/cover-sprite.png) no-repeat 0 -570px;
+    }
+    .disc .inner .roller .item .album .play{
+      display: none;
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+      width: 22px;
+      height: 22px;
+      background: url(./images/icon-sprite.png) no-repeat 0 -85px;
+
+    }
+
+    .disc .inner .roller .item .album:hover .play{
+      display: block;
+
+    }
+     .disc .inner .roller .item a{
+      display: block;
+      margin-top: 5px;
+      padding-right: 10px;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+     }
+     .disc .inner .roller .item a:hover{
+      text-decoration:underline;
+     }
+    .disc .inner .roller .item a.title{
+      color: #000;
+      margin-top: 8px;
+    }
+    .disc .inner .roller .item a.author{
+      color: #666;
+    }
+    .disc .inner .control{
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 72px;
+      bottom: 0;
+      margin: auto 0;
+      background-image:url(./images/main_sprite.png);
+
+    }
+    .disc .inner .control-left{
+      left: 5px;
+      background-position:-260px -75px;
+    }
+    .disc .inner .control-right{
+      right: 5px;
+      background-position:-320px -75px;
+
+    }
+ 
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="area wrapper_02">
+      <div class="area-left">
+        <div class="recommend">
+           <div class="header_type_02">
+            <div class="area_left">
+              <h2 class="title">热门推荐</h2>
+              <ul class="keywords">
+                <li><a class="item" href="#">华语</a></li>
+                <li class="line">|</li>
+                <li><a class="item" href="#">流行</a></li>
+                <li class="line">|</li>
+                <li><a class="item" href="#">摇滚</a></li>
+                <li class="line">|</li>
+                <li><a class="item" href="#">民谣</a></li>
+                <li class="line">|</li>
+                <li><a class="item" href="#">电子</a></li>
+              </ul>
+            </div>
+            <div class="area_right">
+              <a class="more" href="#">更多</a>
+            </div>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="top">
+                <img src="./images/recommend_album-01.jpg" alt="音乐封面">
+                <a class="cover" href="#"></a>
+                <div class="info">
+                  <i class="icon_sprite icon_sprite_music icon-music"></i>
+                  <span class="count">4021万</span>
+                  <i class="icon_sprite icon_sprite_play_01 icon-play"></i>
+                </div>
+              </div>
+              <a class="bottom" href="#">
+                男生的温柔侵入心底 珊瑚长出海面伸向月亮
+              </a>         
+             </div>
+            <div class="item">
+              <div class="top">
+                <img src="./images/recommend_album-01.jpg" alt="音乐封面">
+                <a class="cover" href="#"></a>
+                <div class="info">
+                  <i class="icon_sprite icon_sprite_music icon-music"></i>
+                  <span class="count">4021万</span>
+                  <i class="icon_sprite icon_sprite_play_01 icon-play"></i>
+                </div>
+              </div>
+              <a class="bottom" href="#">
+                男生的温柔侵入心底 珊瑚长出海面伸向月亮
+              </a>         
+             </div>
+            <div class="item">
+              <div class="top">
+                <img src="./images/recommend_album-01.jpg" alt="音乐封面">
+                <a class="cover" href="#"></a>
+                <div class="info">
+                  <i class="icon_sprite icon_sprite_music icon-music"></i>
+                  <span class="count">4021万</span>
+                  <i class="icon_sprite icon_sprite_play_01 icon-play"></i>
+                </div>
+              </div>
+              <a class="bottom" href="#">
+                男生的温柔侵入心底 珊瑚长出海面伸向月亮
+              </a>         
+             </div>
+            <div class="item">
+              <div class="top">
+                <img src="./images/recommend_album-01.jpg" alt="音乐封面">
+                <a class="cover" href="#"></a>
+                <div class="info">
+                  <i class="icon_sprite icon_sprite_music icon-music"></i>
+                  <span class="count">4021万</span>
+                  <i class="icon_sprite icon_sprite_play_01 icon-play"></i>
+                </div>
+              </div>
+              <a class="bottom" href="#">
+                男生的温柔侵入心底 珊瑚长出海面伸向月亮
+              </a>         
+             </div>
+            <div class="item">
+              <div class="top">
+                <img src="./images/recommend_album-01.jpg" alt="音乐封面">
+                <a class="cover" href="#"></a>
+                <div class="info">
+                  <i class="icon_sprite icon_sprite_music icon-music"></i>
+                  <span class="count">4021万</span>
+                  <i class="icon_sprite icon_sprite_play_01 icon-play"></i>
+                </div>
+              </div>
+              <a class="bottom" href="#">
+                 <i class="iconall_sprite iconall_sprite_radio icon-radio"></i>
+                男生的温柔侵入心底 珊瑚长出海面伸向月亮
+              </a>         
+             </div> 
+            <div class="item">
+              <div class="top">
+                <img src="./images/recommend_album-01.jpg" alt="音乐封面">
+                <a class="cover" href="#"></a>
+                <div class="info">
+                  <i class="icon_sprite icon_sprite_music icon-music"></i>
+                  <span class="count">4021万</span>
+                  <i class="icon_sprite icon_sprite_play_01 icon-play"></i>
+                </div>
+              </div>
+              <a class="bottom" href="#">
+                男生的温柔侵入心底 珊瑚长出海面伸向月亮
+              </a>         
+             </div> 
+            <div class="item">
+              <div class="top">
+                <img src="./images/recommend_album-01.jpg" alt="音乐封面">
+                <a class="cover" href="#"></a>
+                <div class="info">
+                  <i class="icon_sprite icon_sprite_music icon-music"></i>
+                  <span class="count">4021万</span>
+                  <i class="icon_sprite icon_sprite_play_01 icon-play"></i>
+                </div>
+              </div>
+              <a class="bottom" href="#">
+                男生的温柔侵入心底 珊瑚长出海面伸向月亮
+              </a>         
+             </div> 
+            <div class="item">
+              <div class="top">
+                <img src="./images/recommend_album-01.jpg" alt="音乐封面">
+                <a class="cover" href="#"></a>
+                <div class="info">
+                  <i class="icon_sprite icon_sprite_music icon-music"></i>
+                  <span class="count">4021万</span>
+                  <i class="icon_sprite icon_sprite_play_01 icon-play"></i>
+                </div>
+              </div>
+              <a class="bottom" href="#">
+                <i class="iconall_sprite iconall_sprite_radio icon-radio"></i>
+                男生的温柔侵入心底 珊瑚长出海面伸向月亮
+              </a>         
+             </div> 
+           </div>
+          </div>
+
+        <div class="disc">
+          <div class="header_type_02">
+            <div class="area_left">
+              <h2 class="title">新碟上架</h2>              
+            </div>
+            <div class="area_right">
+              <a class="more" href="#">更多</a>
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="inner">
+              <div class="roller">
+                <ul class="list">
+                  <li class="item">
+                    <div class="album">
+                      <img src="./images/newdisc_album_01.jpg" alt="">
+                      <a class="cover" href="#"></a>
+                      <a class="play" href="#"></a>
+                    </div>              
+                      <a class="title" href="#">TEENAGE RAMBLE</a>                   
+                      <a class="author" href="#">刘柏辛Lexie</a>
+                  </li>
+                  <li class="item">
+                    <div class="album">
+                      <img src="./images/newdisc_album_01.jpg" alt="">
+                      <a class="cover" href="#"></a>
+                      <a class="play" href="#"></a>
+                    </div>              
+                      <a class="title" href="#">TEENAGE RAMBLE</a>                   
+                      <a class="author" href="#">刘柏辛Lexie</a>
+                  </li>
+                  <li class="item">
+                    <div class="album">
+                      <img src="./images/newdisc_album_01.jpg" alt="">
+                      <a class="cover" href="#"></a>
+                      <a class="play" href="#"></a>
+                    </div>              
+                      <a class="title" href="#">TEENAGE RAMBLE</a>                   
+                      <a class="author" href="#">刘柏辛Lexie</a>
+                  </li>
+                  <li class="item">
+                    <div class="album">
+                      <img src="./images/newdisc_album_01.jpg" alt="">
+                      <a class="cover" href="#"></a>
+                      <a class="play" href="#"></a>
+                    </div>              
+                      <a class="title" href="#">TEENAGE RAMBLE</a>                   
+                      <a class="author" href="#">刘柏辛Lexie</a>
+                  </li>
+                  <li class="item">
+                    <div class="album">
+                      <img src="./images/newdisc_album_01.jpg" alt="">
+                      <a class="cover" href="#"></a>
+                      <a class="play" href="#"></a>
+                    </div>              
+                      <a class="title" href="#">TEENAGE RAMBLE</a>                   
+                      <a class="author" href="#">刘柏辛Lexie</a>
+                  </li>
+
+
+                </ul>
+                <ul class="list">2</ul>
+              </div>
+              <a class="control control-left" href="#"></a>
+              <a class="control control-right" href="#"></a>
+            </div>
+
+          </div>
+
+
+
+
+
+
+        </div>
+        <div class="rank">
+          <div class="header_type_02">
+            <div class="area_left">
+              <h2 class="title">榜单</h2>              
+            </div>
+            <div class="area_right">
+              <a class="more" href="#">更多</a>
+            </div>
+          </div>
+        </div>       
+      </div>
+      <div class="area-right">
+        <div class="user-login">
+          <p class="desc">
+            登录网易云音乐,可以享受无限收藏的乐趣,并且无限同步到手机
+          </p>
+          <a class="btn" href="#">用户登录</a>
+        </div>
+        <div class="settle-singer">
+          <div class="header_type_01">
+            <h3 class="title">入驻歌手</h3>
+            <a class="more" href="#">查看全部 &gt;</a>
+          </div>
+          <ul class="list">
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./images/singer_01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹哈哈哈哈哈哈哈啊</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./images/singer_01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./images/singer_01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./images/singer_01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./images/singer_01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+ 

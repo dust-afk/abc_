@@ -1,0 +1,314 @@
+/*main左侧区域样式 */
+.main .area-left{
+  width: 729px;
+padding: 20px 20px 40px;
+
+}
+.recommend .list{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 20px 2px;
+
+}
+.recommend .list .item{
+width: 140px;
+margin-bottom:30px;
+}
+.recommend .list .item .top{
+/* background-color: #f00; */
+position:relative;
+
+}
+.recommend .list .item .top .cover{
+/* width: 140px;
+height: 140px; */
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+background-image: url(../images/cover-sprite.png);
+background-position: 0 0;
+
+}
+.recommend .list .item .top .info{
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 27px;
+padding-left: 10px;
+line-height: 27px;
+
+font-size: 12px;
+color: #ccc;
+    /* background-color:rgba(0,0,0,.5); */
+background-image: url(../images/cover-sprite.png);
+background-position: 0 -537px;
+}
+.recommend .list .item .top .info .icon-music{
+position: relative;
+top: 2px;
+/* display: inline-block; */
+/* width: 14px;
+height: 11px; */
+/* background-image: url(../images/music_sprite_02.png); */
+/* background-position: 0 -24px; */
+}
+.recommend .list .item .top .info .count{
+margin-left: 4px;
+}
+.recommend .list .item .top .info .icon-play{
+/* position: relative;
+top: 5px; */
+position: absolute;
+top: 0;
+bottom: 0;
+right: 2px;
+margin: auto 0;
+/* display: inline-block; */
+/* width: 16px;
+height: 17px; */
+/* background-image: url(../images/music_sprite_02.png); */
+/* background-position: 0 0; */
+
+}
+/* 底部样式 */
+.recommend .list .item .bottom{
+display: block;
+margin-top: 8px;
+font-size: 14px;
+
+}
+.recommend .list .item .bottom:hover{
+text-decoration: underline;
+}
+.recommend .list .item .bottom .icon-radio{
+position: relative;
+top: 2px;
+}
+
+/*新碟上架 */
+.disc .content{
+height: 186px;
+margin:20px 0;
+box-sizing: border-box;
+border:1px solid #d3d3d3;
+}
+.disc .content .inner{
+position:relative;
+height: 100%;
+box-sizing: border-box;
+padding:0 25px;
+border: 1px solid #fff;
+background-color: #f5f5f5;
+}
+.disc .inner .roller{
+display: flex;
+height: 100%;
+overflow: hidden;
+
+}
+.disc .inner .roller .list{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding-top: 10px;
+flex-shrink: 0;
+
+}
+.disc .inner .roller .list .item{
+width: 118px;
+height: 150px;
+background:url(../images/main_sprite.png) no-repeat -260px 100px;
+}
+.disc .inner .roller .list .item .album{
+position: relative;
+}
+.disc .inner .roller .list .item .cover{
+position:absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+background:url(../images/cover-sprite.png) no-repeat 0 -570px;
+}
+.disc .inner .roller .item .album .play{
+display: none;
+position: absolute;
+right: 10px;
+bottom: 5px;
+width: 22px;
+height: 22px;
+background: url(../images/icon-sprite.png) no-repeat 0 -85px;
+
+}
+
+.disc .inner .roller .item .album:hover .play{
+display: block;
+
+}
+.disc .inner .roller .item a{
+display: block;
+margin-top: 5px;
+padding-right: 10px;
+
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+.disc .inner .roller .item a:hover{
+text-decoration:underline;
+}
+.disc .inner .roller .item a.title{
+color: #000;
+margin-top: 8px;
+}
+.disc .inner .roller .item a.author{
+color: #666;
+}
+.disc .inner .control{
+position: absolute;
+width: 17px;
+height: 17px;
+top: 72px;
+bottom: 0;
+margin: auto 0;
+background-image:url(../images/main_sprite.png);
+
+}
+.disc .inner .control-left{
+left: 5px;
+background-position:-260px -75px;
+}
+.disc .inner .control-right{
+right: 5px;
+background-position:-320px -75px;
+
+}
+/* rank-section */
+.rank-section .content{
+display: flex;
+height: 472px;
+margin-top: 20px;
+background:url(../images/rank_bg.png) no-repeat ;
+}
+.rank-section .content .rank{
+width: 230px;
+}
+.rank-section .content .rank .header{
+display: flex;
+height: 120px;
+box-sizing: border-box;
+padding: 20px 0 0 20px;
+
+}
+.rank-section .content .rank .header .album{
+position: relative;
+width: 80px;
+height: 80px;
+    }
+.rank-section .content .rank .header .album img{
+width: 100%;
+height: 100%;
+}
+.rank-section .content .rank .header .album .cover{
+position:absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+background:url(../images/cover-sprite.png) no-repeat -145px -57px;
+}
+.rank-section .content .rank .header .info{
+padding:10px 12px;
+}
+.rank-section .content .rank .header .info .title{
+color: #333;
+
+}
+.rank-section .rank .header .info .operation{
+
+margin-top: 12px;
+} 
+.rank-section .rank .header .info .btn{
+display: inline-block;
+width: 22px;
+height: 22px;
+background:url(../images/main_sprite.png) no-repeat ;
+}
+.rank-section .rank .header .info .btn.play{
+background-position:-267px -205px;
+}
+.rank-section .rank .header .info .btn.play:hover{
+background-position: -267px -235px;
+
+}
+.rank-section .rank .header .info .btn.favor{
+background-position:-300px -205px;
+margin-left: 8px;
+}
+.rank-section .rank .header .info .btn.favor:hover{
+background-position: -300px -235px;
+}
+.rank-section .rank .list .item{
+display: flex;
+height: 32px;
+line-height: 32px;
+padding-left: 12px;
+padding-right: 5px;
+}
+.rank-section .rank .list .item .no{
+width: 35px;
+font-size: 16px;
+color: #666;
+text-align: center;
+}
+.rank-section .rank .list .item:nth-child(-n+3) .no{
+color: #c10d0c;
+}
+.rank-section .rank .list .item .song{
+flex: 1;
+
+white-space: nowrap;
+text-overflow:ellipsis;
+overflow: hidden;
+}
+.rank-section .rank .list .item .song:hover{
+text-decoration: underline;
+}
+.rank-section .rank .list .item .operation{
+display:none;
+align-items: center;
+width: 82px;
+}
+.rank-section .rank .list .item:hover .operation{
+display: flex;
+}
+.rank-section .rank .list .item .operation .btn{
+width: 17px;
+height: 17px;
+margin-right: 8px;
+background: url(../images/main_sprite.png) no-repeat;
+}
+.rank-section .rank .list .item .operation .btn.play{
+background-position:-267px -268px;
+}
+.rank-section .rank .list .item .operation .btn.add{
+background:url(../images/iconall_sprite.png) no-repeat 2px -698px;
+}
+.rank-section .rank .list .item .operation .btn.favor{
+background-position: -297px -268px;
+
+}
+.rank-section .rank .list .more{
+height: 32px;
+line-height: 32px;
+text-align: right;
+padding-right: 32px;
+}
+.rank-section .rank .list .more a:hover{
+text-decoration: underline;
+}
