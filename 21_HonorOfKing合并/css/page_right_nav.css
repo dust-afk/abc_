@@ -1,0 +1,20 @@
+.right-nav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+
+  transform: translate(0, -50%);
+  width: 128px;
+  height: 247px;
+  background: url(../img/right-dj.webp) no-repeat center;
+}
+
+.right-nav  .right-dj .coder {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  top: 124px;
+  left: 50%; 
+  transform: translateX(-50%);
+
+}

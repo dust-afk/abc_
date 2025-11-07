@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video-Item</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <style>
+    .video_item{
+
+      margin: 100px auto;
+      display: block;
+      width: 212px;
+      height: 200px;
+
+    }
+    .video_item .album {
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .video_item .album img {
+      width: 100%;
+      
+    }
+    .video_item .album .info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 22px;
+      padding: 0 10px;
+      line-height: 22px;
+      background-color: rgba(0,0,0,.6);
+      font-size: 12px;
+      color: #fff;
+
+    }
+
+    .video_item .album .info .count {
+      padding-left: 20px;
+      background: url(./img/main_sprite.webp) no-repeat -256px -59px;
+    }
+    .video_item .album .cover {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,.6);
+      transition: opacity 300ms ease-in;
+    }
+    .video_item:hover .album .cover{
+      opacity: 1;
+    }
+    .video_item .album .cover .icon_paly {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 40px;
+      height: 40px;
+      background-image: url(./img/main_sprite.webp);
+      background-position: -192px -64px;
+      
+    }
+
+    .video_item .desc {
+      margin-top: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      /* -webkit-line-clamp : 2; */
+      -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+<body>
+  <a class="video_item" href="#">
+    <div class="album">
+      <img src="./img/video_album_01.jpg" alt="">
+      <div class="info">
+        <span class="count">471.6万</span>
+        <span class="date">2020-08-29</span>
+      </div>
+      <div class="cover">
+        <i class="icon_play"></i>
+      </div>
+    </div>
+    <div class="desc">
+      UI改造日志|全新图鉴系统、原初羁绊展示等优化内容抢先看
+    </div>
+  </a>
+</body>
+</html>
