@@ -1,0 +1,39 @@
+@import url(./variables.less);
+body {
+  font-size: @normalFontSize;
+  background-color: #f5f5f5;
+}
+
+// tags tag
+.tags {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.tags .tag {
+  // height: 3.2vw;
+  // line-height: 3.2vw;
+  position:relative;
+  margin-right: .8vw;
+  margin-top: .5333vw;
+  padding: 0 .8vw;
+  font-size: 3.2vw;
+  padding: 0 .8vw;
+  color: @mainColor;
+  border: 1px solid @mainColor;
+  border-radius: .8vw;
+  &.ticket {
+    padding-left: 7.2vw
+  }
+  &.ticket:before {
+    content: "券";
+    position:absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0 1.6vw;
+
+    background-color: @lightBgColor;
+  }
+}
+
